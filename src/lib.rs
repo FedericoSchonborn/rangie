@@ -1,6 +1,9 @@
 #![warn(clippy::pedantic)]
 #![feature(step_trait)]
 
+//! An alternative to [`std::ops::Range`] that implements [`IntoIterator`] instead of being an
+//! [`Iterator`] itself, allowing it to also implement [`Copy`].
+
 use std::{iter::Step, ops::Range as StdRange};
 
 /// An alternative to [`std::ops::Range`] that implements [`IntoIterator`] instead of being an
